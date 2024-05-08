@@ -1,0 +1,44 @@
+# This file contains the list of sources that are inserted
+# into the warehouse in a Wayfare Sync.
+- name: hubspot__contacts
+  namespace: [postgres, warehouse]
+  description: "The 'contacts' dataset from the Wayfare Hubspot Source connector"
+  datafields:
+    - name: id
+      datatype:
+        type: string
+    - name: createdat
+      datatype:
+        type: datetime
+    - name: updatedat
+      datatype:
+        type: datetime
+    - name: properties
+      datatype:
+        type: object
+- name: veeva__user__sys
+  namespace: [postgres, warehouse]
+  description: "The 'user__sys' dataset from the Wayfare Veeva Source connector"
+  datafields:
+    - name: id
+      datatype:
+        type: string
+    - name: email__sys
+      datatype:
+        type: string
+    - name: status__v
+      datatype:
+        type: array
+- name: veeva__claim__v
+  namespace: [postgres, warehouse]
+  description: "The 'claim__v' dataset from the Wayfare Veeva Source connector"
+  datafields:
+    - name: id
+      datatype:
+        type: string
+    - name: created_by__v
+      datatype:
+        type: string
+    - name: name__v
+      datatype:
+        type: string
